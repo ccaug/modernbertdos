@@ -82,18 +82,20 @@ Dataset
 The model uses these labels to classify network traffic.
 
 Training Process
-1. Data Preparation:
+1. Flows preparation
+   - Uses the CICFlowMeter tool to process PCAP files and generate CSV files containing flow metrics. These flows are then analyzed by the model for network traffic classification.  
+3. Data Preparation:
    - The dataset is first cleaned, and labels are mapped to numerical values.
    - The data is then split into training, validation, and testing datasets.
 
-2. Model Setup:
+4. Model Setup:
    - The ModernBERT model is used for multi-class classification. It is fine-tuned on the network traffic dataset.
 
-3. Training:
+5. Training:
    - The training process uses Early Stopping to stop training if there is no significant improvement.
    - The trainer logs metrics like Accuracy, F1 Score, Precision, and Recall.
 
-4. Model Saving:
+6. Model Saving:
    - After training, the fine-tuned model and tokenizer are saved.
    - The model is uploaded to Hugging Face Hub for easy sharing.
 
