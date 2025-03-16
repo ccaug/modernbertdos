@@ -22,11 +22,11 @@ To evaluate the model's performance on new data, follow the steps below using th
 ### Usage
 Run the following code to evaluate the fine-tuned ModernBERT model:
 
-```python modernbertdos.py <dataset>
+```python modernbertdos.py <dataset>```
 
 To run the test case, use the following command:
 
-python modernbertdos.py testdataset.csv
+```python modernbertdos.py testdataset.csv```
 
 ## Overview
 
