@@ -58,7 +58,7 @@ You can install them with:
 
 pip install datasets scikit-learn transformers
 
-Setup
+## Setup
 1. Use moderbertdos_training.ipynb to train the model.
 
 2. Open the Jupyter Notebook for training the model.
@@ -67,7 +67,7 @@ Setup
 
 4. Follow the steps in the notebook to start the training process.
 
-Dataset
+## Dataset
 - Input: The dataset should be a CSV file (fulldatasetsmall.csv) containing network traffic features and labels.
 - Label Categories: The dataset contains traffic types labeled as:
   - NetBIOS
@@ -81,7 +81,7 @@ Dataset
 
 The model uses these labels to classify network traffic.
 
-Training Process
+## Training Process
 1. Flows preparation
    - Uses the CICFlowMeter tool to process PCAP files and generate CSV files containing flow metrics. These flows are then analyzed by the model for network traffic classification.  
 3. Data Preparation:
@@ -99,14 +99,14 @@ Training Process
    - After training, the fine-tuned model and tokenizer are saved.
    - The model is uploaded to Hugging Face Hub for easy sharing.
 
-Metrics
+## Metrics
 During training, the following metrics are tracked:
 - Accuracy: The proportion of correct predictions.
 - F1 Score: A weighted average of Precision and Recall.
 - Precision: The proportion of positive predictions that are actually correct.
 - Recall: The proportion of actual positive cases that are correctly identified.
 
-Results
+## Results
 After training, the model achieved the following performance:
 
 | Step | Training Loss | Validation Loss | Accuracy | F1 Score | Precision | Recall |
@@ -119,9 +119,9 @@ After training, the model achieved the following performance:
 | 150  | 0.084         | 0.978           | 0.974    | 0.971    | 0.978     | 0.978  |
 | 175  | 0.078         | 0.985           | 0.982    | 0.978    | 0.986     | 0.986  |
 
-Model Upload
+## Model Upload
 Once training is complete, the model is saved and pushed to the Hugging Face Hub for easy access:
 [ModernBERT-DDOS Model on Hugging Face](https://huggingface.co/ccaug/modernbert_ddos)
 
-Download Model
+## Download Model
 You can download the model from Hugging Face using the model name ccaug/modernbert_ddos.
