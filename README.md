@@ -1,26 +1,23 @@
 # modernbertdos
 ModerBERT DoS tool
 
-# ModernBERT-DDOS Classification Tool
+## ModernBERT-DDOS Classification Tool
 
-This repository contains a tool for fine-tuning a transformer-based model, **ModernBERT**, to classify network traffic into different types based on labeled data. The model is trained on a labeled dataset for detecting various types of network traffic such as DDoS, normal traffic (BENIGN), and others (NetBIOS, LDAP, Syn, MSSQL, UDP, SSL).
+This repository contains a tool for fine-tuning a transformer-based model, **ModernBERT**, to classify network traffic into different types based on labeled data. The model is trained on a labeled dataset (CIC-DDoS2019 and one specifically crafted for SSL) for detecting various types of network traffic such as DDoS, normal traffic (BENIGN), and others (NetBIOS, LDAP, Syn, MSSQL, UDP, SSL).
 
 ## Overview
 
 The tool leverages **Hugging Face's Transformers** library and fine-tunes **ModernBERT** for multi-class classification tasks. The goal is to classify network traffic types from a CSV dataset that includes different features of network packets.
 
 The tool can:
-- Train a classification model using a dataset of network traffic.
 - Use **ModernBERT** to classify the traffic types into one of the predefined categories.
-- Save and upload the trained model to **Hugging Face Hub** for easy sharing and deployment.
 
 ## Features
 
-- **Data Preprocessing**: Cleans and prepares the dataset by removing unnecessary columns and converting labels to numerical values.
 - **Model Fine-Tuning**: Uses **ModernBERT** pre-trained on text data and fine-tunes it for network traffic classification.
 - **Early Stopping**: Monitors the performance of the model on the validation set to stop training early if improvements are minimal.
 - **Model Metrics**: Tracks **Accuracy**, **F1 Score**, **Precision**, and **Recall** during training.
-- **Model Saving and Upload**: Saves the fine-tuned model and tokenizer, and uploads them to **Hugging Face Hub** for easy access.
+- **Model Saving and Upload**: Saves the fine-tuned model and tokenizer, and uploads them to **Hugging Face Hub** for easy access. [ModernBERT-DDOS Model on Hugging Face](https://huggingface.co/ccaug/modernbert_ddos)
 
 ## Requirements
 
@@ -37,9 +34,7 @@ You can install them with:
 pip install datasets scikit-learn transformers
 
 Setup
-1. Clone this repository:
-   git clone https://github.com/your-username/ModernBERT-DDOS-Classification.git
-   cd ModernBERT-DDOS-Classification
+1. Use moderbertdos_training.ipynb to train the model.
 
 2. Open the Jupyter Notebook for training the model.
 
@@ -99,15 +94,7 @@ After training, the model achieved the following performance:
 
 Model Upload
 Once training is complete, the model is saved and pushed to the Hugging Face Hub for easy access:
-
-huggingface-cli login
-trainer.push_to_hub("model_name", token=hf_token)
+[ModernBERT-DDOS Model on Hugging Face](https://huggingface.co/ccaug/modernbert_ddos)
 
 Download Model
-You can download the model from Hugging Face using the model name ccaug/modernbert_ddos once it's uploaded.
-
-License
-This project is licensed under the MIT License.
-
-Contact
-If you have any questions or issues, feel free to contact me via GitHub or open an issue in the repository.
+You can download the model from Hugging Face using the model name ccaug/modernbert_ddos.
