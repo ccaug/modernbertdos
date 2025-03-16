@@ -5,12 +5,36 @@ ModerBERT DoS tool
 
 This repository contains a tool for fine-tuning a transformer-based model, **ModernBERT**, to classify network traffic into different types based on labeled data. The model is trained on a labeled dataset (CIC-DDoS2019 and one specifically crafted for SSL) for detecting various types of network traffic such as DDoS, normal traffic (BENIGN), and others (NetBIOS, LDAP, Syn, MSSQL, UDP, SSL).
 
+## Evaluation
+
+To evaluate the model's performance on new data, follow the steps below using the provided code.
+
+### Requirements
+- Python 3.x
+- The following libraries:
+  - `torch`
+  - `numpy`
+  - `pandas`
+  - `transformers`
+  - `datasets`
+  - `scikit-learn`
+
+### Usage
+Run the following code to evaluate the fine-tuned ModernBERT model:
+
+python modernbertdos.py <dataset>
+
+To run the test case, use the following command:
+python modernbertdos.py testdataset.csv
+
 ## Overview
 
 The tool leverages **Hugging Face's Transformers** library and fine-tunes **ModernBERT** for multi-class classification tasks. The goal is to classify network traffic types from a CSV dataset that includes different features of network packets.
 
 The tool can:
 - Use **ModernBERT** to classify the traffic types into one of the predefined categories.
+
+# Training
 
 ## Features
 
