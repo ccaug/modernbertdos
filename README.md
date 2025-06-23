@@ -11,13 +11,13 @@ To evaluate the model's performance on new data, follow the steps below using th
 
 ### Requirements
 - Python 3.x
-- The following libraries:
-  - `torch`
-  - `numpy`
-  - `pandas`
-  - `transformers`
-  - `datasets`
-  - `scikit-learn`
+  - The following libraries:
+    - `torch`
+    - `numpy`
+    - `pandas`
+    - `transformers`
+    - `datasets`
+    - `scikit-learn`
 - Ollama 
 
 ### Usage
