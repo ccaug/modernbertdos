@@ -17,8 +17,7 @@ To evaluate the model's performance on new data, follow the steps below using th
     - `pandas`
     - `transformers`
     - `datasets`
-    - `scikit-learn`
-- Ollama 
+    - `scikit-learn` 
 
 ### Usage
 Run the following code to evaluate the fine-tuned ModernBERT model:
